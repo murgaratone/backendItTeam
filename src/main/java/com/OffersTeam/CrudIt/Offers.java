@@ -4,65 +4,44 @@ package com.OffersTeam.CrudIt;
 import javax.persistence.*;
 
 @Entity
-@Table(name= "offers")
+@Table(name= "offer")
 public class Offers {
     @Id
     @GeneratedValue(strategy=GenerationType.IDENTITY)
-    @Column(name="Id")
-    private Integer Id;
-    
-    @Column(name="Name")
-    private String Name;
-    
-    @Column(name="Description")
-    private String Description;
-    
-    @Column(name="Price")
-    private Integer Price;
+    private Integer id;
+    private String name;
+    private String description;
+    private Integer price;
 
-    public Offers(Integer Id, String Name, String Description, Integer Price) {
-        this.Id = Id;
-        this.Name = Name;
-        this.Description = Description;
-        this.Price = Price;
-    }
-    public Offers() {
-        
-    }
-    
     public Integer getId() {
-        return Id;
+        return id;
     }
 
-    public void setId(Integer Id) {
-        this.Id = Id;
+    public void setId(Integer id) {
+        this.id = id;
     }
 
     public String getName() {
-        return Name;
+        return name;
     }
 
-    public void setName(String Name) {
-        this.Name = Name;
+    public void setName(String name) {
+        this.name = name;
     }
 
     public String getDescription() {
-        return Description;
+        return description;
     }
 
-    public void setDescription(String Description) {
-        this.Description = Description;
+    public void setDescription(String description) {
+        this.description = description;
     }
 
     public Integer getPrice() {
-        return Price;
+        return price;
     }
 
-    public void setPrice(Integer Price) {
-        this.Price = Price;
+    public void setPrice(Integer price) {
+        this.price = price;
     }
-    
-    
-    
-    
 }

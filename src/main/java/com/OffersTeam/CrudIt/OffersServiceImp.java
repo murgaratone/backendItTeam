@@ -1,6 +1,7 @@
 package com.OffersTeam.CrudIt;
 
 import java.util.List;
+import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -12,12 +13,12 @@ public class OffersServiceImp implements OffersService{
 
     @Override
     public List<Offers> listar() {
-        return repository.findAll();
+        return (List<Offers>) repository.findAll();
     }
 
     @Override
-    public Offers listarId(Integer p) {
-        return repository.findOne(p);
+    public Optional<Offers> listarId(Integer p) {
+        return repository.findById(p);
     }
 
     @Override
@@ -31,9 +32,8 @@ public class OffersServiceImp implements OffersService{
     }
 
     @Override
-    public Offers delete(Integer id) {
-        Offers offer=repository.findOne(id);
-        return repository.delete(offer);
+    public void delete(Integer id) {
+        repository.deleteById(id);
 
     }
 }

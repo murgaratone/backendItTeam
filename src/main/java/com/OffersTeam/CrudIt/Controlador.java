@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
 
-@CrossOrigin(origins = "http://localhost:*")
+@CrossOrigin(origins = "http://localhost:*",maxAge = 3600)
 @RestController
 @RequestMapping({"/offers"})
 public class Controlador {
@@ -18,5 +18,4 @@ public class Controlador {
     public List<Offers>listar(){
         return service.listar();
     }
-
 }

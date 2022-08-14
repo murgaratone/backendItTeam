@@ -1,12 +1,13 @@
 package com.OffersTeam.CrudIt;
 
 import java.util.List;
+import java.util.Optional;
 
 public interface OffersService {
     List<Offers>listar();
-    Offers listarId(Integer p);
+    Optional listarId(Integer p);
     Offers add(Offers p);
     Offers edit(Offers p);
-    Offers delete(Integer id);
+    void delete(Integer id);
 
 }

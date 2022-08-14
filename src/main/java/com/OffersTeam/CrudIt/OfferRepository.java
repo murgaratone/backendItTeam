@@ -1,13 +1,11 @@
 package com.OffersTeam.CrudIt;
 
 
-import org.springframework.data.repository.Repository;
+import org.springframework.data.repository.CrudRepository;
+
 
 import java.util.List;
 
-public interface OfferRepository extends Repository <Offers, Integer>{
-    List<Offers>findAll();
-    Offers findOne(int id);
-    Offers save(Offers p);
-    Offers delete(Offers p);
+public interface OfferRepository extends CrudRepository<Offers, Integer>{
+
 }
