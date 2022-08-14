@@ -1,33 +1,35 @@
-package com.OffersTeam.CrudIt;
+package com.oscar.crudIt.service;
 
 import java.util.List;
 import java.util.Optional;
 
+import com.oscar.crudIt.entity.OfferRepository;
+import com.oscar.crudIt.entity.Offer;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 @Service
-public class OffersServiceImp implements OffersService{
+public class OfferServiceImp implements OfferService {
     @Autowired
     private OfferRepository repository;
 
     @Override
-    public List<Offers> listar() {
-        return (List<Offers>) repository.findAll();
+    public List<Offer> listar() {
+        return (List<Offer>) repository.findAll();
     }
 
     @Override
-    public Optional<Offers> listarId(Integer p) {
+    public Optional<Offer> listarId(Integer p) {
         return repository.findById(p);
     }
 
     @Override
-    public Offers add(Offers p) {
+    public Offer add(Offer p) {
         return repository.save(p);
     }
 
     @Override
-    public Offers edit(Offers p) {
+    public Offer edit(Offer p) {
         return repository.save(p);
     }
 

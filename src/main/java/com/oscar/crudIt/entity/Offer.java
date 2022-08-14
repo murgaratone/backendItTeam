@@ -1,11 +1,11 @@
 
-package com.OffersTeam.CrudIt;
+package com.oscar.crudIt.entity;
 
 import javax.persistence.*;
 
 @Entity
 @Table(name= "offer")
-public class Offers {
+public class Offer {
     @Id
     @GeneratedValue(strategy=GenerationType.IDENTITY)
     private Integer id;
