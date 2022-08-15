@@ -3,10 +3,10 @@ package com.oscar.crudIt.controller;
 import com.oscar.crudIt.entity.Offer;
 import com.oscar.crudIt.service.OfferService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+import java.util.Optional;
 
 @CrossOrigin(origins = "*",maxAge = 3600)
 @RestController
@@ -18,6 +18,8 @@ public class Controlador {
     public List<Offer>listar(){
         return service.listar();
     }
+    @GetMapping("/{id}")
+    public Optional <Offer> oferta(@PathVariable("id") int offerId){return service.listarId(offerId);}
     @PostMapping("")
     public Offer crear(@RequestBody Offer offer){return service.add(offer);}
     @PutMapping("")
