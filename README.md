@@ -2,6 +2,12 @@
 
 Este proyecto implementa la API para offertas implementando un CRUD para su funcionamiento.
 
+## Demo en tiempo real
+
+* La Aplicacion esta desplegada en heroku 
+
+[https://back-spring-it-team.herokuapp.com/offers](https://back-spring-it-team.herokuapp.com/offers)
+
 ## Instalar local
 
 ### Requerimientos
